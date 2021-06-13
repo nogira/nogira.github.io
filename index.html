@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <meta charset="utf-8"/>
+  <link href="https://raw.githubusercontent.com/nogira/nogira.github.io/main/prism/prism.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="content">
+    hello
+    ```py
+    print("hello")
+    ```
+    # hello
+    - hello
+
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+  <script>
+    document.getElementById('content').innerHTML =
+      marked('# Marked in the browser\n\nRendered by **marked**.');
+  </script>
+
+  <script src="https://raw.githubusercontent.com/nogira/nogira.github.io/main/prism/prism.js"></script>
+</body>
+</html>
