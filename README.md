@@ -1,2 +1,0 @@
-# nogira.github.io
-blog
