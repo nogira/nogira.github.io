@@ -1,1 +1,1 @@
-- How to Create a Hugo Blog
+- [How to Create a Hugo Blog](/posts/how-to-create-a-hugo-blog.md)
