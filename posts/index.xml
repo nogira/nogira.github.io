@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Posts on Nogira</title>
+    <link>http://example.org/posts/</link>
+    <description>Recent content in Posts on Nogira</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 12 Jun 2021 23:57:53 +1000</lastBuildDate><atom:link href="http://example.org/posts/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Create a Hugo Blog</title>
+      <link>http://example.org/posts/how-to-create-a-hugo-blog/</link>
+      <pubDate>Sat, 12 Jun 2021 23:57:53 +1000</pubDate>
+      
+      <guid>http://example.org/posts/how-to-create-a-hugo-blog/</guid>
+      <description>Note: This is for mac.
+# Install Hugo. (Requires homebrew) brew install hugo # Generate new site. (Site folder &amp;#39;myblog&amp;#39; is stored in /Users/&amp;lt;User Name&amp;gt;/) hugo new site myblog # Change directory to site folder. cd myblog # Install theme. (More themes found at https://themes.gohugo.io/) git init git submodule add https://github.com/nanxstats/hugo-tanka.git themes/hugo-tanka # Set theme. echo theme = \&amp;#34;hugo-tanka\&amp;#34; &amp;gt;&amp;gt; config.toml # Create first post. hugo new mypost.md # Start server to preview site.</description>
+    </item>
+    
+  </channel>
+</rss>
