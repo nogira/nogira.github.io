@@ -1,5 +1,17 @@
+html {
+  font-family: arial;
+}
+
+#####h1::after {
+  content: "<b>Home</b>";
+}
+
 div#content {
   margin: auto;
   width: 100%;
-  max-width: 800px;
+  max-width: 700px;
+}
+
+code {
+  font-size: 12px !important;
 }
