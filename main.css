@@ -2,10 +2,6 @@ html {
   font-family: arial;
 }
 
-#####h1::after {
-  content: "<b>Home</b>";
-}
-
 div#content {
   margin: auto;
   width: 100%;
@@ -14,4 +10,8 @@ div#content {
 
 code {
   font-size: 12px !important;
+}
+
+br.big {
+  line-height: 4000%;
 }
