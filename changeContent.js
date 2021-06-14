@@ -42,11 +42,18 @@ function changeContent(filePath) {
     }
 
     else if (line.startsWith('\`\`\`')) {
-      if (line.length == 3) {
-        html += '<pre><code class="language-none">';
+      if (inCodeBlock == false) {
+        if (line.length == 3) {
+          html += '<pre><code class="language-none">';
+        } else {
+          html += '<pre><code class="language-' + line.substring(3) + '">';
+        }
       } else {
-        html += '<pre><code class="language-' + line.substring(3) + '">';
+        html += '</code></pre>';
       }
+    }
+    else {
+      html += line
     }
     // add back the new line
     html += '\n'
