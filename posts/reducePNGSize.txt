@@ -1,0 +1,33 @@
+
+# How to Reduce the Size of Your PNGs (In Bulk)
+
+
+PNGs take up a lot of storage space due to having a wide number of colours and transparencies. We can however reduce the number of colors & transparencies a PNG uses, without compromising too much on the image quality.
+
+In this example the png went from 554 KB to just 109 KB.
+<img src=""> <img src="">
+
+Here is an example of a more detailed image. This one went from <> to <>.
+<img src=""> <img src="">
+
+
+First go to https://colab.research.google.com and login.
+
+In the files tab on the left, create one folder called `input`, and another called `output`. Then, copy all your images to the input folder (This may take a while).
+
+Next, copy this code into the code box in the middle of the screen.
+```py
+# get a list of all the files in the input folder
+import os
+arr = os.listdir('input')
+
+# go through each file in the input folder:
+# convert -> save to output folder
+from PIL import Image
+for img in arr:
+    im = Image.open('input/' + img)
+    im = im.quantize()
+    im.save('output/' + img)
+```
+
+Click the play button in the top left of the code box. When the button stops spinning, it is done. Now you can download all your converted images from the output folder.

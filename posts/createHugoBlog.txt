@@ -1,6 +1,5 @@
 
 # How to Create a Hugo Blog
-
 <p style="color:rgb(200,200,200)">Note: This is for mac.</p>
 
 

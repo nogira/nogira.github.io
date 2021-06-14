@@ -94,17 +94,21 @@ function mdToHTML(text) {
 
 
 function changeContent(filePath) {
-    var content = loadFile(filePath);
+    //var content = loadFile(filePath);
 
-    html = mdToHTML(content);
+    //html = mdToHTML(content);
 
-    // replace text
-    document.getElementById("content").innerHTML = html;
+    fetch(filePath).then(x => x.text()).then(data => {
+        html = mdToHTML(data);
 
-    // load prism script
-    var script = document.createElement("script");
-    script.src = 'prism/prism.js';
-    document.body.appendChild(script);
+        // replace text
+        document.getElementById("content").innerHTML = html;
+
+        // load prism script
+        var script = document.createElement("script");
+        script.src = 'prism/prism.js';
+        document.body.appendChild(script);
+    })
 }
 
 //filePath example: "/posts/hello.txt"
