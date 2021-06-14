@@ -94,10 +94,9 @@ function mdToHTML(text) {
 
 function changeContent(filePath) {
     //var content = loadFile(filePath);
-    var content = "";
-    fetch(filePath).then(x => x.text()).then(data => {content = data;
-
-        html = mdToHTML(content);
+    //var content = "";
+    fetch(filePath).then(x => x.text()).then(data => {
+        html = mdToHTML(data);
 
         // replace text
         document.getElementById("content").innerHTML = html;
