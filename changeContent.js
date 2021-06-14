@@ -13,6 +13,7 @@ function loadFile(filePath) {
 
 function mdToHTML(text) {
     var text_array = text.split('\n');
+    alert(text_array);
     var html = '';
     var inCodeBlock = false;
 
@@ -31,7 +32,7 @@ function mdToHTML(text) {
 
             // line-based formatting
 
-            if (line == '\n')) {
+            if (line == '')) {
                 html += '<br>\n';
             }
             else if (line.startsWith('\w')) {
