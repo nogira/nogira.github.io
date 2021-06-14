@@ -6,12 +6,9 @@ div#content {
   margin: auto;
   width: 100%;
   max-width: 700px;
+  margin-bottom: 700px;
 }
 
 code {
   font-size: 12px !important;
-}
-
-br.big {
-  line-height: 4000%;
 }

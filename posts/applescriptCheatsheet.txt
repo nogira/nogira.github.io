@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <link type="text/css" href="../prism/prism.css" rel="stylesheet" />
+  <link type="text/css" href="../main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="content">
+    <h1>Nogira</h1>
+    <div><a href="../index.html">Home</a></div>
+    <div><a href="https://github.com/nogira">Github</a></div>
+    <br>
+    <br>
+    <h2>Applescript Cheatsheet</h2>
+    <pre><code class="language-py">print("hello")</code></pre>
+  </div>
+  <script src="../prism/prism.js"></script>
+</body>
+</html>
