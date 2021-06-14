@@ -20,6 +20,8 @@ function changeContent(filePath) {
 
   // replace text
   document.getElementById("content").innerHTML = content;
+
+  fetchInject(['prism/prism.js']);
 }
 
 //filePath example: "/posts/hello.txt"
