@@ -21,7 +21,10 @@ function changeContent(filePath) {
   // replace text
   document.getElementById("content").innerHTML = content;
 
-  fetchInject(['prism/prism.js']);
+  // load prism script
+  var script = document.createElement("script");
+  script.src = 'prism/prism.js';
+  document.body.appendChild(script);
 }
 
 //filePath example: "/posts/hello.txt"
