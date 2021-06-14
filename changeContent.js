@@ -14,9 +14,8 @@ function changeContent(filePath) {
   var content = loadFile(filePath);
 
   // markdown -> html
-
-  // load prism
-  content +='';
+  var html = '';
+  html +='';
 
   // replace text
   document.getElementById("content").innerHTML = content;
