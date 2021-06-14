@@ -27,7 +27,7 @@ function changeContent(filePath) {
         html += '</code></pre>\n';
         inCodeBlock = false;
       } else {
-        html += line\n;
+        html += line + '\n';
       }
     }
     else if (line.startsWith('\n')) {
