@@ -12,12 +12,12 @@ function loadFile(filePath) {
 // markdown -> html
 
 function mdToHTML(text) {
-    var content_array = content.split('\n');
+    var text_array = text.split('\n');
     var html = '';
     var inCodeBlock = false;
 
-    for (i=0; i < content_array.length; i++) {
-        var line = content_array[i]
+    for (i=0; i < text_array.length; i++) {
+        var line = text_array[i]
 
         // put most common ones at the top so they get executed first
         if (inCodeBlock == true) {
