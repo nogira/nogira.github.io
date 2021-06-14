@@ -21,7 +21,14 @@ function changeContent(filePath) {
   for (i=0; i < content_array.length; i++) {
     var line = content_array[i]
 
-    if (line.startsWith('# ')) {
+    // put most common ones at the top so they get executed first
+    if (line.startsWith('\n')) {
+      html += '<br>';
+    }
+    else if (line.startsWith([A-Z])) {
+      html += '<p>' + line + '</p>';
+    }
+    else if (line.startsWith('# ')) {
       html += '<h1>' + line.substring(2) + '</h1>';
     }
     else if (line.startsWith('## ')) {
@@ -63,7 +70,7 @@ function changeContent(filePath) {
   
 
   // replace text
-  document.getElementById("content").innerHTML = content;
+  document.getElementById("content").innerHTML = html;
 
   // load prism script
   var script = document.createElement("script");
