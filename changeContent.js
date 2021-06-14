@@ -19,21 +19,26 @@ function changeContent(filePath) {
   var inCodeBlock = false;
 
   for (i=0; i < content_array.length; i++) {
-    if (content_array[i].startsWith('# ')) {
-      html += '<h1>' + content_array[i].substring(2) + '</h1>';
+    var line = content_array[i]
+
+    if (line.startsWith('# ')) {
+      html += '<h1>' + line.substring(2) + '</h1>';
     }
-    else if (content_array[i].startsWith('## ')) {
-      html += '<h2>' + content_array[i].substring(2) + '</h2>';
+    else if (line.startsWith('## ')) {
+      html += '<h2>' + line.substring(3) + '</h2>';
     }
-    else if (content_array[i].startsWith('### ')) {
-      html += '<h3>' + content_array[i].substring(2) + '</h3>';
+    else if (line.startsWith('### ')) {
+      html += '<h3>' + line.substring(4) + '</h3>';
+    }
+    else if (line.startsWith('- ')) {
+      html += '<li>' + line.substring(2) + '</li>';
     }
 
-    else if (content_array[i].startsWith('\`\`\`')) {
-      if (content_array[i].length == 3) {
+    else if (line.startsWith('\`\`\`')) {
+      if (line.length == 3) {
         html += '<pre><code class="language-none">';
       } else {
-        html += '<pre><code class="language-' + content_array[i].substring(3) + '">';
+        html += '<pre><code class="language-' + line.substring(3) + '">';
       }
     }
   }
