@@ -5,7 +5,7 @@
 PNGs take up a lot of storage space due to having a wide number of colours and transparencies. We can however reduce the number of colors & transparencies a PNG uses, without compromising too much on the image quality.
 
 In this example the png went from 554 KB to just 109 KB.
-<img src=""> <img src="">
+<img src="https://i.imgur.com/Coc6wvY.png"> <img src="https://i.imgur.com/q54GCU8.png">
 
 Here is an example of a more detailed image. This one went from <> to <>.
 <img src=""> <img src="">
