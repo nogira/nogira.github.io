@@ -11,8 +11,15 @@ function loadFile(filePath) {
 
 
 function changeContent(filePath) {
-  var file = loadFile(filePath);
-  document.getElementById("content").innerHTML = file;
+  var content = loadFile(filePath);
+
+  // markdown -> html
+
+  // load prism
+  content.append('<script src="prism/prism.js"></script>');
+
+  // replace text
+  document.getElementById("content").innerHTML = content;
 }
 
 //filePath example: "/posts/hello.txt"
