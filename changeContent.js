@@ -19,6 +19,10 @@ function changeContent(filePath) {
   var inCodeBlock = false;
 
   for (i=0; i < content_array.length; i++) {
+    if (startsWith('# ')) {
+      html += '<h1>' + content_array[i].substring(2) + '</h1>';
+    }
+
     if (startsWith('\`\`\`')) {
       if (content_array[i].length == 3) {
         html += '<pre><code class="language-none">';
