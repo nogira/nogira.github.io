@@ -32,7 +32,7 @@ function mdToHTML(text) {
 
             // line-based formatting
 
-            if (line == '')) {
+            if (line == '') {
                 html += '<br>\n';
             }
             else if (line.startsWith('\w')) {
