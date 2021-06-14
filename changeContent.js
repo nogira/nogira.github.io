@@ -16,7 +16,7 @@ function changeContent(filePath) {
   // markdown -> html
 
   // load prism
-  content.append('<script src="prism/prism.js"></script>');
+  content +='<script src="prism/prism.js"></script>';
 
   // replace text
   document.getElementById("content").innerHTML = content;
