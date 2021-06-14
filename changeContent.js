@@ -22,7 +22,15 @@ function changeContent(filePath) {
     var line = content_array[i]
 
     // put most common ones at the top so they get executed first
-    if (line.startsWith('\n') && inCodeBlock == false) {
+    if (inCodeBlock == true) {
+      if (line.startsWith('\`\`\`')) {
+        html += '</code></pre>';
+        inCodeBlock = false;
+      } else {
+        html += line;
+      }
+    }
+    else if (line.startsWith('\n')) {
       html += '<br>';
     }
     else if (line.startsWith('\w')) {
@@ -42,15 +50,12 @@ function changeContent(filePath) {
     }
 
     else if (line.startsWith('\`\`\`')) {
-      if (inCodeBlock == false) {
         if (line.length == 3) {
           html += '<pre><code class="language-none">';
         } else {
           html += '<pre><code class="language-' + line.substring(3) + '">';
         }
-      } else {
-        html += '</code></pre>';
-      }
+        inCodeBlock = true;
     }
     else {
       html += line
