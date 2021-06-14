@@ -31,7 +31,7 @@ function mdToHTML(text) {
 
             // line-based formatting
 
-            if (line.startsWith('\n')) {
+            if (line == '\n')) {
                 html += '<br>\n';
             }
             else if (line.startsWith('\w')) {
