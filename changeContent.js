@@ -19,11 +19,17 @@ function changeContent(filePath) {
   var inCodeBlock = false;
 
   for (i=0; i < content_array.length; i++) {
-    if (startsWith('# ')) {
+    if (content_array[i].startsWith('# ')) {
       html += '<h1>' + content_array[i].substring(2) + '</h1>';
     }
+    else if (content_array[i].startsWith('## ')) {
+      html += '<h2>' + content_array[i].substring(2) + '</h2>';
+    }
+    else if (content_array[i].startsWith('### ')) {
+      html += '<h3>' + content_array[i].substring(2) + '</h3>';
+    }
 
-    if (startsWith('\`\`\`')) {
+    else if (content_array[i].startsWith('\`\`\`')) {
       if (content_array[i].length == 3) {
         html += '<pre><code class="language-none">';
       } else {
