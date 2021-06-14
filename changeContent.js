@@ -9,7 +9,10 @@ function loadFile(filePath) {
   return result;
 }
 
-var file = loadFile("hello.txt");
-alert(file);
 
-document.body.innerHTML = file;
+function changeContent(filePath) {
+  var file = loadFile(filePath);
+  document.getElementById("content").innerHTML = file;
+}
+
+//filePath example: "/posts/hello.txt"
