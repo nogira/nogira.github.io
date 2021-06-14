@@ -2,6 +2,10 @@ html {
   font-family: arial;
 }
 
+h1#title {
+  font-size: 2.5em;
+}
+
 div#main {
   margin: auto;
   width: 100%;

@@ -1,2 +1,2 @@
-<h2>Applescript Cheatsheet</h2>
+<h1>Applescript Cheatsheet</h1>
 <pre><code class="language-py">print("hello")</code></pre>

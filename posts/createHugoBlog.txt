@@ -1,5 +1,5 @@
 
-<h2>How to Create a Hugo Blog</h2>
+<h1>How to Create a Hugo Blog</h1>
 <p style="color:rgb(200,200,200)">Note: This is for mac.</p>
 <br>
 <pre><code class="language-shell"># Install Hugo. (Requires homebrew)
