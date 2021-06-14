@@ -71,7 +71,7 @@ function mdToHTML(text) {
         }    
     }
 
-
+    return html
 
 //  for (i=0; i < content.length; i++) {
     // grab first 4 characters at position i
