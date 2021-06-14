@@ -22,7 +22,7 @@ function changeContent(filePath) {
     var line = content_array[i]
 
     // put most common ones at the top so they get executed first
-    if (line.startsWith('\n')) {
+    if (line.startsWith('\n') && inCodeBlock = false) {
       html += '<br>';
     }
     else if (line.startsWith('\w')) {
@@ -48,6 +48,8 @@ function changeContent(filePath) {
         html += '<pre><code class="language-' + line.substring(3) + '">';
       }
     }
+    // add back the new line
+    html += '\n'
   }
 
 
