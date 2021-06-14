@@ -96,7 +96,7 @@ function changeContent(filePath) {
   //var content = loadFile(filePath);
   var content = "";
   fetch(filePath).then(x => x.text()).then(data => {content = data})
-
+  alert(content);
   html = mdToHTML(content);
   
   // replace text
