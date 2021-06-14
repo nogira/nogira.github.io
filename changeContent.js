@@ -24,29 +24,29 @@ function changeContent(filePath) {
     // put most common ones at the top so they get executed first
     if (inCodeBlock == true) {
       if (line.startsWith('\`\`\`')) {
-        html += '</code></pre>';
+        html += '</code></pre>\n';
         inCodeBlock = false;
       } else {
-        html += line;
+        html += line\n;
       }
     }
     else if (line.startsWith('\n')) {
-      html += '<br>';
+      html += '<br>\n';
     }
     else if (line.startsWith('\w')) {
-      html += '<p>' + line + '</p>';
+      html += '<p>' + line + '</p>\n';
     }
     else if (line.startsWith('# ')) {
-      html += '<h1>' + line.substring(2) + '</h1>';
+      html += '<h1>' + line.substring(2) + '</h1>\n';
     }
     else if (line.startsWith('## ')) {
-      html += '<h2>' + line.substring(3) + '</h2>';
+      html += '<h2>' + line.substring(3) + '</h2>\n';
     }
     else if (line.startsWith('### ')) {
-      html += '<h3>' + line.substring(4) + '</h3>';
+      html += '<h3>' + line.substring(4) + '</h3>\n';
     }
     else if (line.startsWith('- ')) {
-      html += '<li>' + line.substring(2) + '</li>';
+      html += '<li>' + line.substring(2) + '</li>\n';
     }
 
     else if (line.startsWith('\`\`\`')) {
@@ -58,10 +58,8 @@ function changeContent(filePath) {
         inCodeBlock = true;
     }
     else {
-      html += line
+      html += line + '\n'
     }
-    // add back the new line
-    html += '\n'
   }
 
 
