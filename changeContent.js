@@ -13,7 +13,6 @@ function loadFile(filePath) {
 
 function mdToHTML(text) {
     var text_array = text.split('\n');
-    alert(text_array);
     var html = '';
     var inCodeBlock = false;
 
