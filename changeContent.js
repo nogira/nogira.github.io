@@ -94,7 +94,7 @@ function mdToHTML(text) {
 
 function changeContent(filePath) {
   //var content = loadFile(filePath);
-  var content = fetch(filePath).then(x => x.text());
+  var content = fetch(filePath).text();
 
   html = mdToHTML(content);
   
