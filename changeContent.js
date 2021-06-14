@@ -25,7 +25,7 @@ function changeContent(filePath) {
     if (line.startsWith('\n')) {
       html += '<br>';
     }
-    else if (line.startsWith([A-Z])) {
+    else if (line.startsWith('\w')) {
       html += '<p>' + line + '</p>';
     }
     else if (line.startsWith('# ')) {
