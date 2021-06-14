@@ -1,8 +1,10 @@
 
-<h1>How to Create a Hugo Blog</h1>
+# How to Create a Hugo Blog
+
 <p style="color:rgb(200,200,200)">Note: This is for mac.</p>
 <br>
-<pre><code class="language-shell"># Install Hugo. (Requires homebrew)
+```shell
+# Install Hugo. (Requires homebrew)
 brew install hugo
       
 # Generate new site. (Site folder 'myblog' is stored in /Users/<User Name>/)
@@ -22,7 +24,8 @@ hugo new mypost.md
 # Start server to preview site. (The site URL should show up in the terminal)
 hugo server -D
 # Alternatively, build the static website files
-hugo -D</code></pre>
+hugo -D
+```
 <br>
 <b>Website Customisation</b>
 <br>
