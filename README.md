@@ -1,6 +1,6 @@
 # Blog Thing
 
-Auto generates the HTML files for a minimal blog. The HTML files are based on the index HTML, and text files (in markdown) in the md_posts folder. 
+Auto generates the HTML files for a minimal blog. The HTML files are based on the `index.html`, and txt files (written in markdown) in the `md_posts` folder. 
 
 CSS is in `main.css`.
 
