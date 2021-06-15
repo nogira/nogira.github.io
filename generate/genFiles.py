@@ -45,18 +45,22 @@ for post in posts:
         html = template.read()
         import mdToHTML
         content = mdToHTML.convert(content.read())
-        html = html.replace('<div id="content">', '<div id="content">\n' + content)
+        html = html.replace('<div id="content">', 
+            '<div id="content">\n' + content + '<br>\n<br>\n<hr noshade>\n<hr noshade>' +
+            '\n<br>\n<br>\n<h3>If you loved this, please consider <a href="">donating</a> :)<h3>')
 
         # modify css/js/homr filepaths since the template is designed to be called from root
         html = html.replace('prism/', '../prism/').replace('main.css', '../main.css')\
             .replace('index.html', '../index.html')
+
+        # add
 
         # write file
         newfile.write(html)
 
     
     # create html content for index.html ----------------------------------------------
-    htmlForIndex += f'<li><a href="html_posts/{filename}.html">{title} - {date}</a></li>'
+    htmlForIndex += f'<li><a href="html_posts/{filename}.html">{title}</a> - {date}</li>'
     if posts.index(post) + 1 < len(posts):
         htmlForIndex += '\n<br>\n'
 

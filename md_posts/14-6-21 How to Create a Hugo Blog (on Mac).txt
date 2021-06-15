@@ -1,6 +1,7 @@
 # How to Create a Hugo Blog (on Mac)
 
 
+Terminal commands:
 ```shell
 # Install Hugo. (Requires homebrew)
 brew install hugo
@@ -28,6 +29,6 @@ hugo -D
 
 **Website Customisation**
 
-Customisation requires editing of the <code class="language-none">config.toml</code> file. In the case of this theme, you can go to <code class="language-none">/myblog/themes/hugo-tanka/exampleSite/</code>, then copy <code class="language-none">config.toml</code> there and use it to replace the <code class="language-none">config.toml</code> in <code class="language-none">/myblog/</code>.
+Customisation requires editing of the `config.toml` file. In the case of this theme, you can go to `/myblog/themes/hugo-tanka/exampleSite/`, then copy `config.toml` there and use it to replace the `config.toml` in `/myblog/`.
 
-More information on <code class="language-none">config.toml</code> options can be found [here](https://gohugo.io/getting-started/configuration/).
+More information on `config.toml` options can be found [here](https://gohugo.io/getting-started/configuration/).

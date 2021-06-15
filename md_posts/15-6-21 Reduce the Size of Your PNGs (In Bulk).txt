@@ -1,14 +1,25 @@
 # Reduce the Size of Your PNGs (In Bulk)
 
 
-PNGs take up a lot of storage space due to having a wide number of colours and transparencies. We can however reduce the number of colors & transparencies a PNG uses, without compromising too much on the image quality.
+PNGs take up a lot of storage space as they have a large number of colours and transparencies. To reduce their size, we can minimise the number of colors & transparencies the PNG uses, without compromising too much on the image quality.
 
-In this example the png went from 554 KB to just 109 KB.
-<img src="https://i.imgur.com/Coc6wvY.png" width="347px" /><img src="https://i.imgur.com/q54GCU8.png" width="347px" />
+In this example the png went from 554 KB to just 109 KB with almost no visible effect.
+---
+![[https://i.imgur.com/Coc6wvY.png|347]]
+![[https://i.imgur.com/q54GCU8.png|347]]
+---
 
-Here is an example of a more detailed image. This one went from 9.2 MB to 4.3 MB.
-<img src="" width="347px" /> <img src="" width="347px" />
+Here is an example of a photograph. This one went from 9.2 MB to 4.3 MB.
+---
+![[https://|347]]
+![[https://|347]]
+---
 
+This is the type of image where you will start to notice a change (gradient-based images). This was <> to <>.
+---
+![[https://|347]]
+![[https://|347]]
+---
 
 First go to https://colab.research.google.com and login.
 
