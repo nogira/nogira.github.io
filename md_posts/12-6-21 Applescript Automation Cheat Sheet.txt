@@ -1,0 +1,8 @@
+# Applescript Automation Cheat Sheet
+
+Basic syntax & commands:
+```applescript
+-- this is a comment
+
+set var1 to "hello"
+```

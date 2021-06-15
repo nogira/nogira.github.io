@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en-us">
+<head>
+  <link type="text/css" href="../prism/prism.css" rel="stylesheet" />
+  <link type="text/css" href="../main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <div id="main">
+    <h1 id="title">Nogira</h1>
+    <div>
+      <a href="../index.html">Home</a>
+      <span>&nbsp;&nbsp;&nbsp;</span>
+      <a href="https://github.com/nogira">Github</a>
+    </div>
+    <br>
+    <br>
+    <br>
+    <div id="content">
+<h1>How to Create a Hugo Blog (on Mac)</h1>
+<br>
+<br>
+<pre><code class="language-shell"># Install Hugo. (Requires homebrew)
+brew install hugo
+      
+# Generate new site. (Site folder 'myblog' is stored in /Users/<User Name>/)
+hugo new site myblog
+# Change directory to site folder.
+cd myblog
+
+# Install theme. (More themes found at https://themes.gohugo.io/)
+git init
+git submodule add https://github.com/nanxstats/hugo-tanka.git themes/hugo-tanka
+# Set theme.
+echo theme = \"hugo-tanka\" >> config.toml
+
+# Create first post.
+hugo new mypost.md
+
+# Start server to preview site. (The site URL should show up in the terminal)
+hugo server -D
+# Alternatively, build the static website files
+hugo -D
+</code></pre>
+<br>
+<br>
+<div>**Website Customisation**</div>
+<br>
+<div>Customisation requires editing of the <code class="language-none">config.toml</code> file. In the case of this theme, you can go to <code class="language-none">/myblog/themes/hugo-tanka/exampleSite/</code>, then copy <code class="language-none">config.toml</code> there and use it to replace the <code class="language-none">config.toml</code> in <code class="language-none">/myblog/</code>.</div>
+<br>
+<div>More information on <code class="language-none">config.toml</code> options can be found [here](https://gohugo.io/getting-started/configuration/).</div>
+
+    </div>
+    <script src="../prism/prism.js"></script>
+  </div>
+</body>
+</html>

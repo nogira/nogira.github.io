@@ -1,0 +1,52 @@
+# Reduce the Size of Your PNGs (In Bulk)
+
+
+PNGs take up a lot of storage space due to having a wide number of colours and transparencies. We can however reduce the number of colors & transparencies a PNG uses, without compromising too much on the image quality.
+
+In this example the png went from 554 KB to just 109 KB.
+<img src="https://i.imgur.com/Coc6wvY.png" width="347px" /><img src="https://i.imgur.com/q54GCU8.png" width="347px" />
+
+Here is an example of a more detailed image. This one went from 9.2 MB to 4.3 MB.
+<img src="" width="347px" /> <img src="" width="347px" />
+
+
+First go to https://colab.research.google.com and login.
+
+In the files tab on the left, create one folder called `input`, and another called `output`. Then, copy all your images to the input folder (I did ~100 MB of images at a time after trying 300 MB at once crashed the website).
+
+Next, copy this code into the code box in the middle of the screen.
+```py
+# get a list of all the files in the input folder
+import os
+arr = os.listdir('input')
+if '.ipynb_checkpoints' in arr:
+    del arr[arr.index('.ipynb_checkpoints')]
+
+# go through each file in the input folder:
+# convert -> save to output folder
+from PIL import Image
+for img in arr:
+    im = Image.open('input/' + img)
+    try:
+        im = im.quantize()
+        im.save('output/' + img)
+    except:
+        print(img)
+
+# create zip of output folder
+import os
+import zipfile
+def zipdir(path, ziph):
+    for root, dirs, files in os.walk(path):
+        for file in files:
+            ziph.write(os.path.join(root, file), 
+                       os.path.relpath(os.path.join(root, file), 
+                                       os.path.join(path, '..')))
+zipf = zipfile.ZipFile('output.zip', 'w', zipfile.ZIP_DEFLATED)
+zipdir('output/', zipf)
+zipf.close()
+```
+
+Click the play button in the top left of the code box. When the button stops spinning, it is done. After clicking the refresh files button, you can now download the `output.zip` containing all your converted images.
+
+If an image is unable to be converted, it will output the name of the image to the console (any text that appears directly below the code box while/after running the code).
