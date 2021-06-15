@@ -34,9 +34,6 @@ function mdToHTML(text) {
             if (line == '') {
                 html += '<br>\n';
             }
-            else if (line.startsWith('\w')) {
-                html += '<p>' + line + '</p>\n';
-            }
             else if (line.startsWith('# ')) {
                 html += '<h1>' + line.substring(2) + '</h1>\n';
             }
@@ -58,7 +55,7 @@ function mdToHTML(text) {
                 inCodeBlock = true;
             }
             else {
-                html += line + '\n';
+                html += '<p>' + line + '</p>\n';
             }
 
             // word/character-based formatting
