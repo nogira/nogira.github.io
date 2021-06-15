@@ -11,6 +11,7 @@ div#main {
   width: 100%;
   max-width: 700px;
   margin-bottom: 200px;
+  word-wrap: break-word;
 }
 
 code {

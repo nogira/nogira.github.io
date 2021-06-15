@@ -11,15 +11,10 @@ In this example the png went from 554 KB to just 109 KB with almost no visible e
 
 Here is an example of a photograph. This one went from 9.2 MB to 4.3 MB.
 ---
-![[https://|347]]
-![[https://|347]]
+![[https://i.imgur.com/YmWUo94.jpg|347]]
+![[https://i.imgur.com/JyvsaTj.png|347]]
 ---
 
-This is the type of image where you will start to notice a change (gradient-based images). This was <> to <>.
----
-![[https://|347]]
-![[https://|347]]
----
 
 First go to https://colab.research.google.com and login.
 
