@@ -55,7 +55,7 @@ function mdToHTML(text) {
                 inCodeBlock = true;
             }
             else {
-                html += '<p>' + line + '</p>\n';
+                html += '<div>' + line + '</div>\n';
             }
 
             // word/character-based formatting
