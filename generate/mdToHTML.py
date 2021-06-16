@@ -53,9 +53,9 @@ def convert(md):
                 URL = URLandwidth[0]
                 if len(URLandwidth) > 1:
                     width = URLandwidth[1]
-                    html_line = f'<img src="{URL}" width="{width}px" alt="" />\n'
+                    html_line = f'<img src="{URL}" width="{width}px" alt="" loading="lazy" />\n'
                 else:
-                    html_line = f'<img src="{URL}" alt="" />\n'
+                    html_line = f'<img src="{URL}" alt="" loading="lazy" />\n'
                 
             else:
                 html_line += '<div>' + line + '</div>\n'

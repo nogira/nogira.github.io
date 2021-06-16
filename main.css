@@ -1,11 +1,9 @@
 html {
   font-family: arial;
 }
-
 h1#title {
   font-size: 2.5em;
 }
-
 div#main {
   margin: auto;
   width: 100%;
@@ -13,7 +11,15 @@ div#main {
   margin-bottom: 200px;
   word-wrap: break-word;
 }
-
 code {
-  font-size: 12px !important;
+  font-size: 14px !important;
+}
+p#donate {
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
 }

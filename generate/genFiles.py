@@ -49,7 +49,7 @@ for post in posts:
         html = html.replace('<<description>>', title)
         html = html.replace('<<content>>', content + 
             '<br>\n<br>\n<hr noshade>\n<hr noshade>' +
-            '\n<br>\n<br>\n<h3>If you loved this, please consider <a href="../generate/donate.html">donating</a> :)<h3>')
+            '\n<br>\n<br>\n<p id="donate">If you loved this, please consider <a href="../generate/donate.html">donating</a> :)<p>')
 
         # modify css/js/home filepaths since the template is designed to be called from root
         html = html.replace('prism/', '../prism/').replace('main.css', '../main.css')\
