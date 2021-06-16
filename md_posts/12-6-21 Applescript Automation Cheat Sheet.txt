@@ -74,7 +74,7 @@ end doWithTimeout
 ```
 There are two main things to see in this code; the speed, and the verbosity. This first line `delay 18.266890` indicates that every time you run this script, it will first wait 18 seconds before executing the click, which is not very optimal. Thus, the first thing you should do is delete it.
 
-The rest is a bit more complex. If you look around the middle you should see `on doWithTimeout(uiScript, timeoutSeconds)` which is the start of the main function, with everything below that being part of that function. Essentially, the 3rd line of code `set uiScript to...` has a command inside its string which is being passed to the function (`my doWithTimeout( uiScript, timeoutSeconds )`), and the function is executing that command to "System Events" after a delay.
+The rest is a bit more complex. If you look around the middle you should see `on doWithTimeout(uiScript, timeoutSeconds)` which is the start of the main function, with everything below that being part of that function. Essentially, the 3rd line of code `set uiScript to...` has a command inside its string which is being passed to the function (`my doWithTimeout( uiScript, timeoutSeconds )`), and the function is executing that command to "System Events".
 
 To simplify this, we start with the string of `uiScript`. This is the only part of the original code we need:
 ```applescript
