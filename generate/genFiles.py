@@ -45,8 +45,10 @@ for post in posts:
         html = template.read()
         import mdToHTML
         content = mdToHTML.convert(content.read())
-        html = html.replace('<div id="content">', 
-            '<div id="content">\n' + content + '<br>\n<br>\n<hr noshade>\n<hr noshade>' +
+        html = html.replace('<<title>>', title)
+        html = html.replace('<<description>>', title)
+        html = html.replace('<<content>>', content + 
+            '<br>\n<br>\n<hr noshade>\n<hr noshade>' +
             '\n<br>\n<br>\n<h3>If you loved this, please consider <a href="../generate/donate.html">donating</a> :)<h3>')
 
         # modify css/js/home filepaths since the template is designed to be called from root
@@ -70,7 +72,9 @@ for post in posts:
         html = template.read()
         import mdToHTML
         content = mdToHTML.convert(content.read())
-        html = html.replace('<div id="content">', '<div id="content">\n' + content)
+        html = html.replace('<<title>>', 'Donate to Nogira')
+        html = html.replace('<<description>>', 'Donate to Nogira')
+        html = html.replace('<<content>>', content)
 
         # modify css/js/home filepaths since the template is designed to be called from root
         html = html.replace('prism/', '../prism/').replace('main.css', '../main.css')\
@@ -92,6 +96,8 @@ with open('template.html', 'r') as template, \
      open('../index.html', 'w') as index:
 
     html = template.read()
-    html = html.replace('<div id="content">', '<div id="content">\n' + htmlForIndex)
+    html = html.replace('<<title>>', 'Nogira\'s Blog')
+    html = html.replace('<<description>>', 'Nogira\'s Blog') 
+    html = html.replace('<<content>>', htmlForIndex)
     index.write(html)
 
