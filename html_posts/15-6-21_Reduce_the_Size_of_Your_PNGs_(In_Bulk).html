@@ -53,32 +53,21 @@
 <pre><code class="language-py"># get a list of all the files in the input folder
 import os
 arr = os.listdir('input')
-if '.ipynb_checkpoints' in arr:
-    del arr[arr.index('.ipynb_checkpoints')]
 
 # go through each file in the input folder:
 # convert -> save to output folder
 from PIL import Image
 for img in arr:
-    im = Image.open('input/' + img)
     try:
+        im = Image.open('input/' + img)
         im = im.quantize()
         im.save('output/' + img)
     except:
         print(img)
 
 # create zip of output folder
-import os
-import zipfile
-def zipdir(path, ziph):
-    for root, dirs, files in os.walk(path):
-        for file in files:
-            ziph.write(os.path.join(root, file), 
-                       os.path.relpath(os.path.join(root, file), 
-                                       os.path.join(path, '..')))
-zipf = zipfile.ZipFile('output.zip', 'w', zipfile.ZIP_DEFLATED)
-zipdir('output/', zipf)
-zipf.close()
+import shutil
+shutil.make_archive('output', 'zip', 'output/')
 </code></pre>
 <br>
 <div>Click the play button in the top left of the code box. When the button stops spinning, it is done. After clicking the refresh files button, you can now download the <code class="language-none">output.zip</code> containing all your converted images.</div>

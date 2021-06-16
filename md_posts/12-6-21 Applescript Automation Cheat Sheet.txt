@@ -1,7 +1,8 @@
 # Applescript Automation Cheat Sheet
 
 
-Use the built-in `Script Editor` app to write and run applescripts
+Use the built-in `Script Editor` app to write and run applescripts.
+
 
 Basic syntax & commands:
 ```applescript
