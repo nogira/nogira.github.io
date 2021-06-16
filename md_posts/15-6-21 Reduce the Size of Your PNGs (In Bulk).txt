@@ -9,14 +9,20 @@ In this example the png went from 554 KB to just 109 KB with almost no visible e
 ![[https://i.imgur.com/q54GCU8.png|347]]
 ---
 
-Here is an example of a photograph. This one went from 9.2 MB to 4.3 MB.
+Here is an example of a photograph. (721 KB to 266 KB)
 ---
-![[https://i.imgur.com/YmWUo94.jpg|347]]
-![[https://i.imgur.com/JyvsaTj.png|347]]
+![[https://i.imgur.com/cTJSHc4.png|347]]
+![[https://i.imgur.com/RnomLXS.png|347]]
+---
+
+I've found the only time I ever really notice it is when the image has a very smooth gradient like this. (61 KB to 16 KB)
+---
+![[https://i.imgur.com/HMmOOZp.png|347]]
+![[https://i.imgur.com/jaSO99e.png|347]]
 ---
 
 
-First go to https://colab.research.google.com and login.
+To easily convert images yourself, first go to https://colab.research.google.com and login.
 
 In the files tab on the left, create one folder called `input`, and another called `output`. Then, copy all your images to the input folder (I did ~100 MB of images at a time after trying 300 MB at once crashed the website).
 
